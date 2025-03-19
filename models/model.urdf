@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="model">
+  
+    <link name="world" />
+  <joint name="world_joint" type="fixed">
+    <origin
+      xyz="0.0 0.0 0.0"
+      rpy="0 0 0" />
+    <parent
+      link="world" />
+    <child
+      link="base_link" />
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0190878309262091 4.43759555153935E-05 0.0624104253214578"
+        rpy="0 0 0" />
+      <mass
+        value="3.14882590752787" />
+      <inertia
+        ixx="0.0118444734235513"
+        ixy="2.92372188460978E-05"
+        ixz="-0.00194355146872946"
+        iyy="0.0164852449930982"
+        iyz="5.29848886774371E-06"
+        izz="0.0135747542054953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="yao_Link">
+    <inertial>
+      <origin
+        xyz="3.37363565146992E-06 -0.0252730128469273 0.113055713473566"
+        rpy="0 0 0" />
+      <mass
+        value="1.80047507511529" />
+      <inertia
+        ixx="0.00956981868067036"
+        ixy="-6.88777342468106E-07"
+        ixz="-4.75414883477061E-07"
+        iyy="0.00856427364623799"
+        iyz="0.00195729101288257"
+        izz="0.00330559998390123" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/yao_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/yao_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yao_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="yao_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="3000"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="dabi_Link">
+    <inertial>
+      <origin
+        xyz="-2.62996172071921E-06 -0.205457096495288 -0.00960602947091848"
+        rpy="0 0 0" />
+      <mass
+        value="3.97962862227802" />
+      <inertia
+        ixx="0.0897031311100228"
+        ixy="3.03145651979742E-06"
+        ixz="6.90971089456608E-07"
+        iyy="0.0104769184022239"
+        iyz="-0.0192571895317577"
+        izz="0.0843252851001566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/dabi_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/dabi_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dabi_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0135 0.1665"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="yao_Link" />
+    <child
+      link="dabi_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="3000"
+      velocity="2.62" />
+  </joint>
+  <link
+    name="xiaobiqian_Link">
+    <inertial>
+      <origin
+        xyz="3.46216158955519E-06 -0.0758134438559637 0.0192731488252177"
+        rpy="0 0 0" />
+      <mass
+        value="1.79684366598554" />
+      <inertia
+        ixx="0.013063945488173"
+        ixy="8.11307844865837E-07"
+        ixz="2.11335786775296E-07"
+        iyy="0.0033492465264039"
+        iyz="-0.00346020627276854"
+        izz="0.0117340229847005" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/xiaobiqian_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/xiaobiqian_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="xiaobiqian_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.394 0"
+      rpy="0 0 0" />
+    <parent
+      link="dabi_Link" />
+    <child
+      link="xiaobiqian_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="3000"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="xiaobihou_Link">
+    <inertial>
+      <origin
+        xyz="1.21714896606732E-05 -0.0312761696235735 0.110299392490287"
+        rpy="0 0 0" />
+      <mass
+        value="1.29581282440583" />
+      <inertia
+        ixx="0.00598551933150687"
+        ixy="-4.76354996951821E-07"
+        ixz="5.45716206020315E-07"
+        iyy="0.00489832818590639"
+        iyz="0.00152655463456657"
+        izz="0.00226748492444237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/xiaobihou_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/xiaobihou_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="xiaobihou_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.21 -0.0135"
+      rpy="1.5708 0 0" />
+    <parent
+      link="xiaobiqian_Link" />
+    <child
+      link="xiaobihou_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="3000"
+      velocity="3.93" />
+  </joint>
+  <link
+    name="shouwan_Link">
+    <inertial>
+      <origin
+        xyz="1.28250601622599E-05 -0.0842939753328475 0.0110292015780438"
+        rpy="0 0 0" />
+      <mass
+        value="1.22513751471334" />
+      <inertia
+        ixx="0.00628411383835426"
+        ixy="-3.44225627959499E-07"
+        ixz="-1.12226946575813E-07"
+        iyy="0.0014649278641654"
+        iyz="-0.0012841897662462"
+        izz="0.00598580635862483" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/shouwan_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/shouwan_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shouwan_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.004 0.156"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="xiaobihou_Link" />
+    <child
+      link="shouwan_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="3000"
+      velocity="3.93" />
+  </joint>
+  <link
+    name="shuchu_Link">
+    <inertial>
+      <origin
+        xyz="4.74052273747548E-05 0.0230629614254657 0.0200433803651805"
+        rpy="0 0 0" />
+      <mass
+        value="0.542737889541383" />
+      <inertia
+        ixx="0.00116638936092843"
+        ixy="-2.23897335387667E-07"
+        ixz="-4.21045040413773E-07"
+        iyy="0.000638413639370755"
+        iyz="0.000282359820734026"
+        izz="0.000951961053841569" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/shuchu_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.592156862745098 0.666666666666667 0.682352941176471 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model/meshes/shuchu_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shuchu_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.1855 -0.00412"
+      rpy="1.5708 0 0" />
+    <parent
+      link="shouwan_Link" />
+    <child
+      link="shuchu_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-6.28"
+      upper="6.28"
+      effort="3000"
+      velocity="3.93" />
+  </joint>
+  <link
+    name="ee_Link">
+    <collision>
+      <origin
+        xyz="-0.01 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box
+          size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="ee_joint" type="fixed">
+    <origin
+      xyz="0 0.1855 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="shuchu_Link" />
+    <child
+      link="ee_Link" />
+  </joint>
+  
+ <link name="tool0"/>
+  <joint name="shuchu_link-tool0_fixed_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.00648"/>
+    <parent link="shuchu_Link"/>
+    <child link="tool0"/>
+  </joint>
+</robot>
